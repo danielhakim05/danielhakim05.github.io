@@ -156,7 +156,7 @@
             <h3 class="text-xl font-bold mb-4 text-blue-300">Select Diamond Package:</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
                 <!-- Package 1 -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
+                <div id="d1" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
                     <div class="flex items-center mb-2">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L5 6.5V17.5L12 22L19 17.5V6.5L12 2Z" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1"/>
@@ -173,7 +173,7 @@
                 </div>
                 
                 <!-- Package 2 -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
+                <div id="d2" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
                     <div class="flex items-center mb-2">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L5 6.5V17.5L12 22L19 17.5V6.5L12 2Z" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1"/>
@@ -190,7 +190,7 @@
                 </div>
                 
                 <!-- Package 3 - Best Value -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative">
+                <div id="d3" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative">
                     <div class="absolute -top-3 -right-3 bg-yellow-400 text-yellow-900 px-2 py-1 rounded-full text-xs font-bold">
                         BEST VALUE
                     </div>
@@ -210,7 +210,7 @@
                 </div>
                 
                 <!-- Package 4 -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
+                <div id="d4" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
                     <div class="flex items-center mb-2">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L5 6.5V17.5L12 22L19 17.5V6.5L12 2Z" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1"/>
@@ -227,7 +227,7 @@
                 </div>
                 
                 <!-- Package 5 -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
+                <div id="d5" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
                     <div class="flex items-center mb-2">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L5 6.5V17.5L12 22L19 17.5V6.5L12 2Z" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1"/>
@@ -244,7 +244,7 @@
                 </div>
                 
                 <!-- Package 6 -->
-                <div class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
+                <div id="d6" class="bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer">
                     <div class="flex items-center mb-2">
                         <svg class="w-6 h-6 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 2L5 6.5V17.5L12 22L19 17.5V6.5L12 2Z" fill="#00FFFF" stroke="#FFFFFF" stroke-width="1"/>
@@ -289,7 +289,7 @@
                 </label>
             </div>
             
-            <button class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 rounded-md font-bold shadow-lg pulse">
+            <button onclick="location.replace('bank.html')" class="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-white py-3 rounded-md font-bold shadow-lg">
                 CONTINUE TO PAYMENT
             </button>
         </section>
@@ -414,7 +414,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 pt-4">
-                <p class="text-gray-500 text-sm text-center">© 2023 ML Diamond Store. Not affiliated with Moonton.</p>
+                <p class="text-gray-500 text-sm text-center">© 2023 Mobila Lagendari Diamond Store.</p>
             </div>
         </div>
     </footer>
@@ -443,6 +443,102 @@
 
 
     <script>
+        document.getElementById("d1").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d2").removeAttribute('style');
+            document.getElementById("d3").removeAttribute('style');
+            document.getElementById("d4").removeAttribute('style');
+            document.getElementById("d5").removeAttribute('style');
+            document.getElementById("d6").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-white hover: transition cursor-pointer";
+            document.getElementById("d1").style = "border: 3px solid white";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+        });
+        document.getElementById("d2").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d1").removeAttribute('style');
+            document.getElementById("d3").removeAttribute('style');
+            document.getElementById("d4").removeAttribute('style');
+            document.getElementById("d5").removeAttribute('style');
+            document.getElementById("d6").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-white hover: transition cursor-pointer";
+            document.getElementById("d2").style = "border: 3px solid white";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+        });
+        document.getElementById("d3").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d1").removeAttribute('style');
+            document.getElementById("d2").removeAttribute('style');
+            document.getElementById("d4").removeAttribute('style');
+            document.getElementById("d5").removeAttribute('style');
+            document.getElementById("d6").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d3").style = "border: 3px solid white";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+        });
+        document.getElementById("d4").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d1").removeAttribute('style');
+            document.getElementById("d2").removeAttribute('style');
+            document.getElementById("d3").removeAttribute('style');
+            document.getElementById("d5").removeAttribute('style');
+            document.getElementById("d6").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-white hover: transition cursor-pointer";
+            document.getElementById("d4").style = "border: 3px solid white";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+        });
+        document.getElementById("d5").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d1").removeAttribute('style');
+            document.getElementById("d2").removeAttribute('style');
+            document.getElementById("d3").removeAttribute('style');
+            document.getElementById("d4").removeAttribute('style');
+            document.getElementById("d6").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-white hover: transition cursor-pointer";
+            document.getElementById("d5").style = "border: 3px solid white";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover:border-blue-300 transition cursor-pointer";
+        });
+        document.getElementById("d6").addEventListener("click", function(e) {
+            e.preventDefault();
+            document.getElementById("d1").removeAttribute('style');
+            document.getElementById("d2").removeAttribute('style');
+            document.getElementById("d3").removeAttribute('style');
+            document.getElementById("d4").removeAttribute('style');
+            document.getElementById("d5").removeAttribute('style');
+
+            document.getElementById("d1").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d2").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d3").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border-2 border-yellow-400 hover:border-yellow-300 transition cursor-pointer relative";
+            document.getElementById("d4").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d5").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-blue-500 hover: border-blue-300 transition cursor-pointer";
+            document.getElementById("d6").className = "bg-gradient-to-b from-gray-800 to-gray-900 rounded-lg p-4 border border-white hover: transition cursor-pointer";
+            document.getElementById("d6").style = "border: 3px solid white";
+        });
         // Countdown timer
         function updateCountdown() {
             const countdownEl = document.querySelector('.countdown');

@@ -1,28 +1,65 @@
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSC253</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            .background {
-                background-color: rgba(0, 255, 255, 0.246);
-            }
-
-            .button {
-                border: 1px solid black;
-            }
-        </style>
-    </head>
-    <body class="background">
-        <div>
-            <p class="text-3xl p-4 font-bold">CSC263</p>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSC253</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
         
-        <div class="container px-4">
-            <input type="button" onclick="location.replace('hacking.html')" value="Hacking Uploader" class="button mb-2 w-full text-black py-2 px-4 rounded-md hover:bg-white transition duration-300 text-sm font-medium"></input>
-            <input type="button" onclick="location.replace('ml.html')" value="Mobila Lagendari: Boom Boom" class="button mb-2 w-full text-black py-2 px-4 rounded-md hover:bg-white transition duration-300 text-sm font-medium"></input>
-            <input type="button" onclick="location.replace('bank.html')" value="Bank Simpanan Malaysia (BSM)" class="button mb-2 w-full text-black py-2 px-4 rounded-md hover:bg-white transition duration-300 text-sm font-medium"></input>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .button-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .button-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center">
+    <div class="container mx-auto px-4 py-12">
+        <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div class="bg-indigo-600 py-6 px-8">
+                <h1 class="text-4xl font-bold text-white text-center">CSC253: Introduction to Multimedia</h1>
+            </div>
+            
+            <div class="p-8">
+                <div class="space-y-6">
+                    <button onclick="location.replace('hacking.html')" class="button-hover w-full bg-gradient-to-r from-red-500 to-red-700 text-white py-4 px-6 rounded-xl font-semibold text-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                        </svg>
+                        Hacking Uploader
+                    </button>
+                    
+                    <button onclick="location.replace('ml.html')" class="button-hover w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white py-4 px-6 rounded-xl font-semibold text-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                        </svg>
+                        Mobila Lagendari: Boom Boom
+                    </button>
+                    
+                    <button onclick="location.replace('bank.html')" class="button-hover w-full bg-gradient-to-r from-green-500 to-green-700 text-white py-4 px-6 rounded-xl font-semibold text-lg flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
+                        </svg>
+                        Bank Simpanan Malaysia (BSM)
+                    </button>
+                </div>
+                
+                <div class="mt-8 text-center text-gray-500 text-sm">
+                    <p>© 2023 CSC253. All rights reserved.</p>
+                </div>
+            </div>
         </div>
-    </body>
+    </div>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94cf5736d741a697',t:'MTc0OTQ1ODU5OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
